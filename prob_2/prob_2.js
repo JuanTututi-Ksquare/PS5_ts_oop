@@ -12,6 +12,7 @@ class Matrix {
             this._elements.push(array);
         }
     }
+    // Getters
     get rows() {
         return this._rows;
     }
@@ -21,9 +22,11 @@ class Matrix {
     get elements() {
         return this._elements;
     }
+    // Get specific element
     getElement(rowIndex, columnIndex) {
         return this._elements[rowIndex][columnIndex];
     }
+    // Set specific element
     setElement(rowIndex, columnIndex, value) {
         if (rowIndex > this._rows || columnIndex > this._columns) {
             console.log("Error: You cannot insert values on undefined index");
@@ -115,40 +118,40 @@ class Matrix {
 // matrix4.setElement(2,1,-15);
 // console.log(matrix4.add(matrix3, matrix4));
 // PRODUCT TEST
-// const matrix1 = new Matrix(3, 3);
-// const matrix2 = new Matrix(3,3);
-// matrix1.setElement(0,0,2);
-// matrix1.setElement(0,1,0);
-// matrix1.setElement(0,2,1);
-// matrix1.setElement(1,0,3);
-// matrix1.setElement(1,1,0);
-// matrix1.setElement(1,2,0);
-// matrix1.setElement(2,0,5);
-// matrix1.setElement(2,1,1);
-// matrix1.setElement(2,2,1);
-// matrix2.setElement(0,0,1);
-// matrix2.setElement(0,1,0);
-// matrix2.setElement(0,2,1);
-// matrix2.setElement(1,0,1);
-// matrix2.setElement(1,1,2);
-// matrix2.setElement(1,2,1);
-// matrix2.setElement(2,0,1);
-// matrix2.setElement(2,1,1);
-// matrix2.setElement(2,2,0);
-// console.log(matrix1.elements);
-// console.log(matrix2.elements);
-// console.log(matrix1.multiply(matrix1, matrix2));
+const matrix1 = new Matrix(3, 3);
+const matrix2 = new Matrix(3, 3);
+matrix1.setElement(0, 0, 2);
+matrix1.setElement(0, 1, 0);
+matrix1.setElement(0, 2, 1);
+matrix1.setElement(1, 0, 3);
+matrix1.setElement(1, 1, 0);
+matrix1.setElement(1, 2, 0);
+matrix1.setElement(2, 0, 5);
+matrix1.setElement(2, 1, 1);
+matrix1.setElement(2, 2, 1);
+matrix2.setElement(0, 0, 1);
+matrix2.setElement(0, 1, 0);
+matrix2.setElement(0, 2, 1);
+matrix2.setElement(1, 0, 1);
+matrix2.setElement(1, 1, 2);
+matrix2.setElement(1, 2, 1);
+matrix2.setElement(2, 0, 1);
+matrix2.setElement(2, 1, 1);
+matrix2.setElement(2, 2, 0);
+console.log(matrix1.elements);
+console.log(matrix2.elements);
+console.log(matrix1.multiply(matrix1, matrix2));
 // PRODUCT TEST 2
-const matrixProd1 = new Matrix(2, 2);
-const matrixProd2 = new Matrix(3, 2);
-matrixProd1.setElement(0, 0, 1);
-matrixProd1.setElement(0, 1, 2);
-matrixProd1.setElement(1, 0, 3);
-matrixProd1.setElement(1, 1, 4);
-matrixProd2.setElement(0, 0, 1);
-matrixProd2.setElement(0, 1, 1);
-matrixProd2.setElement(1, 0, 0);
-matrixProd2.setElement(1, 1, 2);
-console.log(matrixProd1.elements);
-console.log(matrixProd2.elements);
-console.log(matrixProd1.multiply(matrixProd1, matrixProd2));
+// const matrixProd1 = new Matrix(2, 2);
+// const matrixProd2 = new Matrix(2, 2);
+// matrixProd1.setElement(0, 0, 1);
+// matrixProd1.setElement(0, 1, 2);
+// matrixProd1.setElement(1, 0, 3);
+// matrixProd1.setElement(1, 1, 4);
+// matrixProd2.setElement(0, 0, 1);
+// matrixProd2.setElement(0, 1, 1);
+// matrixProd2.setElement(1, 0, 0);
+// matrixProd2.setElement(1, 1, 2);
+// console.log(matrixProd1.elements);
+// console.log(matrixProd2.elements);
+// console.log(matrixProd1.multiply(matrixProd1, matrixProd2));
